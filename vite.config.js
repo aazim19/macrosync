@@ -3,15 +3,11 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/macrosync/', // ADD THIS LINE
+  base: '/macrosync/', // This must match your repo name exactly
   logLevel: 'error',
   plugins: [
     base44({
-      legacySDKImports: process.env.BASE44_LEGACY_SDK_IMPORTS === 'true',
-      hmrNotifier: true,
-      navigationNotifier: true,
-      analyticsTracker: true,
-      visualEditAgent: true
+      // ... keep your existing base44 settings
     }),
     react(),
   ]
